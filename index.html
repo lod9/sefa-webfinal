@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Host Sefa | Anasayfa</title>
+    <script src="./src/scripts/vue.global.js"></script>
+    <script src="./src/scripts/vuex.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Bu site, Sefa tarafından Atatürk Üniversitesi Tortum MYO Web Tasarım dersi için Tailwind ve Vue kullanılarak oluşturulmuştur.">
+    <meta name="keywords" content="Sefa, web tasarım, Tailwind, Vue.js, Atatürk Üniversitesi, Tortum MYO, HTML, CSS, JavaScript">
+    <meta name="author" content="Hacı Sefa Güler">
+    <meta property="og:title" content="Sefa'nın Web Sitesi">
+    <meta property="og:description" content="Sefa tarafından yapılan web tasarımı projesi, Tailwind ve Vue.js ile oluşturulmuştur.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="./src/images/3edb0017f4afc8468712aefc713b906b.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div id="app" class="flex justify-center w-full h-fit bg-[#171420]" style="background-size: 100% 100%;">
+      <div class="flex flex-col w-[75vw] h-fit" v-if="anasayfa">
+        <div class="flex justify-between items-center w-full h-fit py-[2.7778vh]">
+          <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Host Sefa</p>
+          <ul class="flex gap-[2.0833vw]">
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="geridon">
+              <a>Anasayfa</a>
+            </li>
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="hakkinda">
+              <a>Hakkında</a>
+            </li>
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]">
+              <a href="#konular">Konular</a>
+            </li>
+            
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]">
+              <a href="mailto:hacisefa.guler24@ogr.atauni.edu.tr">İletişim</a>
+            </li>
+          </ul>
+          <div class="flex w-[6.6875vw] h-[4.2222vh] justify-center items-center border border-solid border-white rounded-[.5208vw] text-white [font-family:Raleway] text-[.6375vw] font-regular leading-[normal]"><a href="https://obs.atauni.edu.tr/" target="_blank">ATA UNI</a> </div>
+        </div>
+        <div class="flex w-full h-fit items-center">
+          <div class="w-fit h-fit flex flex-col">
+            <p class="text-[#2A4AF4] [font-family:Raleway] text-[.9375vw] font-semibold leading-[normal] uppercase">Host Sefa'ya Hoşgeldiniz</p>
+            <p class="text-white [font-family:Raleway] text-[3.8032vw] font-bold leading-[120%]">Alan Adı ve<br>Hosting<br>Hakkında</p>
+            <div class="w-[50%] text-[#9B9B9B] [font-family:Raleway] text-[.8333vw] font-medium ">Alan Adı ve Hosting Hakkında Bilmeniz Gereken Her Şey! Doğru seçimlerle çevrimiçi varlığınızı güçlendirin.</div>
+            <div class="w-fit h-fit mt-[3vh]">
+              <div class="flex w-[9.6875vw] h-[7.2222vh] justify-center items-center shrink-0 [background:#5F65F4] text-white [font-family:Raleway] text-[.9375vw] font-semibold leading-[normal]"><a href="#konular">Konulara Göz At!</a></div>
+            </div>
+          </div>
+          <div class="relative w-fit h-fit flex flex-col  justify-end">
+            <img src="./src/images/cheerful-african-american-male-student-using-lapto-47WVYNJ-1-800x859.png" class="w-[32.5521vw] relative z-[2]">
+            <div class="w-full h-full flex justify-center items-center absolute">
+              <div class="w-[26.0417vw] h-[46.2963vh] shrink-0 [background:#9694E7] rounded-[26.0417vw] "></div>
+            </div>
+            <div class="w-full h-fit flex justify-between absolute items-end bottom-[0vh] z-[3]">
+              <div class="flex justify-center items-center w-[16.3542vw] h-[16.1111vh] shrink-0 [background:#9694E7] gap-[.6167vw]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3.125vw" height="5.5556vh" viewBox="0 0 60 60" fill="none">
+                  <path d="M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30Z" fill="white"/>
+                  <path d="M29.9439 35.9441C27.7345 35.9441 25.9438 37.7354 25.9438 39.9448C25.9438 42.1542 27.7351 43.9455 29.9439 43.9455C32.1527 43.9455 33.9439 42.1542 33.9439 39.9448C33.9439 37.7354 32.2064 35.9441 29.9439 35.9441ZM30.0001 25.9439C25.6094 25.9439 21.3812 27.544 18.0937 30.4459C17.2686 31.2315 17.1874 32.494 17.9187 33.3253C18.6562 34.1503 19.9187 34.2316 20.7437 33.5003C23.3 31.244 26.5876 30.0002 30.0001 30.0002C33.4127 30.0002 36.7065 31.2428 39.2565 33.5003C39.6378 33.8378 40.1128 34.0003 40.5816 34.0003C40.8652 34.0005 41.1456 33.9404 41.4043 33.8239C41.6629 33.7074 41.8938 33.5373 42.0816 33.3247C42.8128 32.494 42.7378 31.2315 41.9066 30.5003C38.619 27.6002 34.3939 25.9439 30.0001 25.9439ZM49.388 23.7939C44.1441 18.7675 37.2627 16 30.0001 16C22.7375 16 15.8555 18.7675 10.615 23.7939C9.81814 24.5595 9.79252 25.8252 10.5564 26.6221C11.3202 27.4208 12.5858 27.4421 13.3846 26.6807C17.8187 22.3189 23.775 20.0001 30.0001 20.0001C36.2252 20.0001 42.0691 22.3732 46.6129 26.6814C47.0067 27.0502 47.5004 27.2377 48.0004 27.2377C48.5258 27.2377 49.0511 27.0326 49.4436 26.6224C50.2067 25.8252 50.1817 24.5064 49.388 23.7939Z" fill="#9694E7"/>
+                </svg>
+                <div class="w-fit h-fit">
+                  <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Sunucu Barındırma</p>
+                  <p class="text-white [font-family:Raleway] text-[.6375vw] font-medium leading-[131%]">Sunucu Barındırma Hakkında Daha <br> Fazla Bilgi Edinebilirsiniz</p>
+                </div>
+              </div>
+              <div class="w-[16.3542vw] h-[25.2778vh] shrink-0 [background:#5F65F4] flex flex-col justify-center items-center gap-[4.9259vh]">
+                <div class="flex w-fit h-fit gap-[.6167vw]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="3.125vw" height="5.5556vh" viewBox="0 0 60 60" fill="none">
+                    <path d="M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30Z" fill="white"/>
+                    <path d="M29.9439 35.9441C27.7345 35.9441 25.9438 37.7354 25.9438 39.9448C25.9438 42.1542 27.7351 43.9455 29.9439 43.9455C32.1527 43.9455 33.9439 42.1542 33.9439 39.9448C33.9439 37.7354 32.2064 35.9441 29.9439 35.9441ZM30.0001 25.9439C25.6094 25.9439 21.3812 27.544 18.0937 30.4459C17.2686 31.2315 17.1874 32.494 17.9187 33.3253C18.6562 34.1503 19.9187 34.2316 20.7437 33.5003C23.3 31.244 26.5876 30.0002 30.0001 30.0002C33.4127 30.0002 36.7065 31.2428 39.2565 33.5003C39.6378 33.8378 40.1128 34.0003 40.5816 34.0003C40.8652 34.0005 41.1456 33.9404 41.4043 33.8239C41.6629 33.7074 41.8938 33.5373 42.0816 33.3247C42.8128 32.494 42.7378 31.2315 41.9066 30.5003C38.619 27.6002 34.3939 25.9439 30.0001 25.9439ZM49.388 23.7939C44.1441 18.7675 37.2627 16 30.0001 16C22.7375 16 15.8555 18.7675 10.615 23.7939C9.81814 24.5595 9.79252 25.8252 10.5564 26.6221C11.3202 27.4208 12.5858 27.4421 13.3846 26.6807C17.8187 22.3189 23.775 20.0001 30.0001 20.0001C36.2252 20.0001 42.0691 22.3732 46.6129 26.6814C47.0067 27.0502 47.5004 27.2377 48.0004 27.2377C48.5258 27.2377 49.0511 27.0326 49.4436 26.6224C50.2067 25.8252 50.1817 24.5064 49.388 23.7939Z" fill="#9694E7"/>
+                  </svg>
+                  <div class="w-fit h-fit">
+                    <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Sunucu Koruma</p>
+                    <p class="text-white [font-family:Raleway] text-[.6375vw] font-medium leading-[131%]">Sunucu Koruma Hakkında Daha <br> Fazla Bilgi Edinebilirsiniz</p>
+                  </div>
+                </div>
+                <div class="flex w-fit h-fit gap-[.6167vw]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="3.125vw" height="5.5556vh" viewBox="0 0 60 60" fill="none">
+                    <path d="M60 30C60 46.5685 46.5685 60 30 60C13.4315 60 0 46.5685 0 30C0 13.4315 13.4315 0 30 0C46.5685 0 60 13.4315 60 30Z" fill="white"/>
+                    <path d="M29.9439 35.9441C27.7345 35.9441 25.9438 37.7354 25.9438 39.9448C25.9438 42.1542 27.7351 43.9455 29.9439 43.9455C32.1527 43.9455 33.9439 42.1542 33.9439 39.9448C33.9439 37.7354 32.2064 35.9441 29.9439 35.9441ZM30.0001 25.9439C25.6094 25.9439 21.3812 27.544 18.0937 30.4459C17.2686 31.2315 17.1874 32.494 17.9187 33.3253C18.6562 34.1503 19.9187 34.2316 20.7437 33.5003C23.3 31.244 26.5876 30.0002 30.0001 30.0002C33.4127 30.0002 36.7065 31.2428 39.2565 33.5003C39.6378 33.8378 40.1128 34.0003 40.5816 34.0003C40.8652 34.0005 41.1456 33.9404 41.4043 33.8239C41.6629 33.7074 41.8938 33.5373 42.0816 33.3247C42.8128 32.494 42.7378 31.2315 41.9066 30.5003C38.619 27.6002 34.3939 25.9439 30.0001 25.9439ZM49.388 23.7939C44.1441 18.7675 37.2627 16 30.0001 16C22.7375 16 15.8555 18.7675 10.615 23.7939C9.81814 24.5595 9.79252 25.8252 10.5564 26.6221C11.3202 27.4208 12.5858 27.4421 13.3846 26.6807C17.8187 22.3189 23.775 20.0001 30.0001 20.0001C36.2252 20.0001 42.0691 22.3732 46.6129 26.6814C47.0067 27.0502 47.5004 27.2377 48.0004 27.2377C48.5258 27.2377 49.0511 27.0326 49.4436 26.6224C50.2067 25.8252 50.1817 24.5064 49.388 23.7939Z" fill="#9694E7"/>
+                  </svg>
+                  <div class="w-fit h-fit">
+                    <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Sunucu Yapılandırma</p>
+                    <p class="text-white [font-family:Raleway] text-[.6375vw] font-medium leading-[131%]">Sunucu Yapılandırma Hakkında Daha <br> Fazla Bilgi Edinebilirsiniz</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center w-full h-fit py-[4vh] gap-[6.3148vh]">
+          <div class="flex flex-col items-center w-fit h-fit" id="konular">
+            <p class="text-[#2A4AF4] [font-family:Raleway] text-[.9375vw] font-semibold leading-[normal] uppercase">Güncel Konular</p>
+            <p class="text-white text-center [font-family:Raleway] text-[3.125vw] font-bold leading-[6.4815vh]">Web Barındırma & Koruma <br> Hakkındaki Makaleler</p>
+          </div>
+          <div class="w-full h-fit flex flex-wrap gap-[0.8vw]">
+            <div v-for="(item, index) in items" :key="index" class="flex flex-col w-[18.0729vw] h-[27.7778vh] shrink-0 [background:#1F1D2C] gap-[2.5vh] cursor-pointer scale-[1] hover:scale-[1.2] pb-[1vh]"  @click="detaygoster(item)">
+              <div class="relative w-full h-[60%] bg-cover before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent before:to-[#1F1D2C] before:z-10" :style="{ backgroundImage: `url(${item.görsel})` }"></div>
+              <div class="flex flex-col items-center justify-center w-fit h-fit">
+                <p class="text-white [font-family:Raleway] text-[1vw] font-semibold leading-[normal] text-center">{{ item.baslik }}</p>
+                <div class="w-[80%] text-center text-[#9B9B9B] [font-family:Raleway] text-[.7375vw] font-medium leading-[131%]" v-html="ilk100getir(item.icerik)"></div>
+              </div>
+            </div>          
+          </div>
+        </div>
+        
+        <div class="flex w-full h-fit py-[4vh] justify-between">
+          <div class="w-fit h-fit">
+            <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Host Sefa</p>
+            <p class="text-white [font-family:Raleway] text-[.6375vw] font-regular leading-[normal]">Tüm Hakları Saklıdır 2024-2025</p>
+          </div>
+          
+          <div></div>
+          <div class="w-fit h-fit">
+            <p class="text-white [font-family:Raleway] text-[.6375vw] font-regular leading-[normal]"><i class="fa-solid fa-phone"></i> +90 553 049 3679</p>
+          </div>
+        </div>
+      </div>
+      <div v-if="selectedItem" class="flex flex-col w-[75vw] h-fit">
+        <div class="flex justify-between items-center w-full h-fit py-[2.7778vh]">
+          <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Host Sefa</p>
+          <ul class="flex gap-[2.0833vw]">
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="geridon">
+              <a>Anasayfa</a>
+            </li>
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="hakkinda">
+              <a>Hakkında</a>
+            </li>
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="geridon">
+              <a href="#konular">Konular</a>
+            </li>
+            
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]">
+              <a href="mailto:hacisefa.guler24@ogr.atauni.edu.tr">İletişim</a>
+            </li>
+          </ul>
+          <div class="flex w-[6.6875vw] h-[4.2222vh] justify-center items-center border border-solid border-white rounded-[.5208vw] text-white [font-family:Raleway] text-[.6375vw] font-regular leading-[normal]"><a href="https://obs.atauni.edu.tr/" target="_blank">ATA UNI</a> </div>
+        </div>
+        <div class="flex flex-col w-full h-fit items-start p-[2.6042vw] gap-[1.8519vh]">
+          <button @click="geridon" class="text-white [font-family:Raleway] text-[1vw] font-semibold leading-[normal]">Geri Dön</button>
+          <img :src="selectedItem.görsel" class="w-[65.3646vw] h-[59.0511vh]" />
+          <p class="text-white [font-family:Raleway] text-[3.125vw] font-bold leading-[6.4815vh]">{{ selectedItem.baslik }}</p>
+          <div class="w-fit h-fit flex flex-col justify-center items-start gap-[1.0417vw]" v-html="selectedItem.icerik"></div>
+        </div>
+      </div>
+      <div class="flex flex-col w-[75vw] h-[100vh]" v-if="hakkimda">
+        <div class="flex justify-between items-center w-full h-fit py-[2.7778vh]">
+          <p class="text-white [font-family:Raleway] text-[.9375vw] font-bold leading-[normal]">Host Sefa</p>
+          <ul class="flex gap-[2.0833vw]">
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="geridon">
+              <a>Anasayfa</a>
+            </li>
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="hakkinda">
+              <a>Hakkında</a>
+            </li>
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]" @click="geridon">
+              <a href="#konular">Konular</a>
+            </li>
+           
+            <li class="cursor-pointer text-white [font-family:Raleway] text-[.9375vw] font-medium leading-[normal]">
+              <a href="mailto:hacisefa.guler24@ogr.atauni.edu.tr">İletişim</a>
+            </li>
+          </ul>
+          <div class="flex w-[6.6875vw] h-[4.2222vh] justify-center items-center border border-solid border-white rounded-[.5208vw] text-white [font-family:Raleway] text-[.6375vw] font-regular leading-[normal]"><a href="https://obs.atauni.edu.tr/" target="_blank">ATA UNI</a> </div>
+        </div>
+        <div class="flex flex-col w-full h-fit items-center justify-center p-[2.6042vw] gap-[1.8519vh]">
+          <p class="text-white [font-family:Raleway] text-[3vw] font-bold leading-[normal]">Hakkımda</p>
+            <p class="w-[50.625vw] text-white [font-family:Raleway] text-[1.5vw] font-regular leading-[normal]">
+              Merhaba, ben Sefa. 26 Kasım 2005 doğumluyum ve Atatürk Üniversitesi Tortum MYO'da birinci sınıf öğrencisiyim. Web tasarımına olan ilgim sayesinde bu siteyi oluşturmayı tercih ettim. Tasarım sürecinde Tailwind CSS ve Vue.js gibi güçlü teknolojileri kullanarak bu projeyi gerçekleştirdim. Web geliştirme alanında kendimi geliştirmeye ve yeni şeyler öğrenmeye devam ediyorum. Bu site, aynı zamanda okulda aldığım web tasarım dersinin bir ödevi olarak hayat buldu.
+              
+              İletişim için bana şu kanallardan ulaşabilirsiniz:
+              
+              E-posta: haci.sefa.guler24@ogr.atauni.edu.tr
+              Telefon: +90 553 049 3679
+              Bu projeye olan katkılarım ve öğrencilik hayatım hakkında daha fazla bilgi almak isterseniz, iletişime geçmekten çekinmeyin!</p>
+          
+
+        </div>
+      </div>
+    </div>
+    <script src="./src/scripts/main.js"></script>
+  </body>
+</html>
