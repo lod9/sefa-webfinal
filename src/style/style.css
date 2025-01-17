@@ -27,28 +27,8 @@
 *{
   transition: all 0.3s ease;
 }
-.search-container {
-  position: relative;
-}
 
-.search-input {
-  width: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: width 0.3s ease, opacity 0.3s ease;
-}
 
-.search-container:hover .search-input,
-.search-input:focus {
-  width: 11vw;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.search-container i {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
+a:hover {
+  color: #9694E7;
 }
